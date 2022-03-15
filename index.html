@@ -3,62 +3,16 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>My First Page</title>
+    <title>MiPagina</title>
 </head>
 <body>
-    <script>
-        /**
- * @param String name
- * @return String
- */
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-    results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-    </script>
+    <h1>Mi Pirmera Pagina</h1>
 </body>
-<table>
-    <tr>
-        <td>Nombre</td>
-        <td>Apellido</td>
-        <td>Direccion</td>
-        <td>Telefono</td>
-        <td>Usuario</td>
-        <td>Contraseña</td>
-    </tr>
-    <tr>
-        <td>
-            <script>
-                document.write(getParameterByName("nombre"))
-            </script>
-        </td>
-        <td>
-            <script>
-                document.write(getParameterByName("apellido"))
-            </script>
-        </td>
-        <td>
-            <script>
-                document.write(getParameterByName("direccion"))
-            </script>
-        </td>
-        <td>
-            <script>
-                document.write(getParameterByName("telefono"))
-            </script>
-        </td>
-        <td>
-            <script>
-                document.write(getParameterByName("usuario"))
-            </script>
-        </td>
-        <td>
-            <script>
-                document.write(getParameterByName("contraseña"))
-            </script>
-        </td>
-    </tr>
-</table>
+    <form action="dos.html" method="get">
+        <p>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre">
+        </p>
+    </form>
+
 </html>
